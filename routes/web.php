@@ -11,11 +11,20 @@
 |
 */
 
+use Illuminate\Support\Facades\Input;
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
 Route::get('/feedback', function () {
     return view('feedback');
 });
+
+Route::post('/feedback/add',function(){
+
+        return response()->json(Input::all());
+
+})->name('submit');

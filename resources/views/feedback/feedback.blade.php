@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>feedback</title>
 
-    <link rel="stylesheet" href="{{ asset('feedback-style.css') }}">
-    <link rel="stylesheet" href="{{ asset('bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('normalize.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  </head>
-  <body>
     <!-- Feedback -->
-
         <section class="feedback text-center">
         <div class="overlay">
             <div class="container">
                 <h1 class="upper">send<span class="main-color">feedback</span></h1>
                 <p class="main">We appreciate the time that you spend sending us feedback.<br /> Your feedback goes directly to YouTube and we use it to troubleshoot bugs </p>
-                <form>
-                    <input type="email" name="mail" placeholder="youe email">
+                <form class="" action="/feedback/add" method="post">
+                  @csrf
+                    <input type="email" name="mail" placeholder="youe email" value="">
                       <input type="text" name="supject" placeholder="supject">
                       <textarea placeholder="message"></textarea>
                       <div class="end">
@@ -34,7 +23,3 @@
               </div>
           </div>
         </section>
-
-    <!-- end feedback -->
-  </body>
-</html>
