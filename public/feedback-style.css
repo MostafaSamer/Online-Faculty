@@ -1,0 +1,186 @@
+/* general style */
+*{
+	box-sizing:border-box;
+}
+
+body{
+	font-family: "Open Sans";
+}
+
+.container{
+	margin:auto;
+	width:1170px;
+	position:relative;
+}
+
+.text-center{
+	text-align:center;
+}
+
+*{
+	filter: blur(1)
+}
+
+.upper{
+	text-transform:uppercase;
+}
+
+
+.main-color{
+	color:#0e83f7;
+}
+
+.main-background{
+	background-color:#0e83f7;
+}
+
+.overlay{
+	background:rgba(49,55,61,0.85)	;
+	width:100%;
+}
+
+::-webkit-input-placeholder {
+    font-size: 13px;
+	color:#666;
+}
+
+::-moz-input-placeholder {
+    font-size: 13px;
+	color:#666;
+}
+
+::-o-input-placeholder {
+    font-size: 13px;
+	color:#666;
+}
+
+.hidden{
+	display:none;
+}
+
+
+
+
+/* start feedback */
+
+
+.feedback .overlay{
+	padding:50px 0;
+	color:#fff;
+}
+
+.feedback h1{
+	font-size:35px;
+	font-weight: 500;
+}
+
+.feedback form{
+	width:700px;
+	text-align:center;
+	margin:50px auto;
+	overflow:hidden
+}
+
+.feedback form input[type="text"],
+.feedback form input[type="email"]{
+	width:48%;
+	padding:0 10px;
+	height:40px;
+	line-height:40px;
+	border-radius:10px;
+	border:1px solid #ccc;
+	background-color:rgba(255,255,255,0.05);
+	font-size:15px;
+}
+
+.feedback form input:hover{
+	border:#0e83f7 2px solid;
+	background-color:rgba(255,255,255,0.1);
+}
+
+.feedback form input:click{
+	border:#0e83f7 2px solid;
+	background-color:rgba(255,255,255,0.1);
+}
+
+.feedback form::placeholder {
+    font-size: 13px;
+	   color:#ccc;
+}
+
+.feedback form input[type="text"]{
+	float:right
+}
+
+.feedback form input[type="email"]{
+	float:left
+}
+
+.feedback form textarea{
+	margin-top:20px;
+	width:100%;
+	padding:10px;
+	height:140px;
+	border-radius:10px;
+	border:1px solid #ccc;
+	background-color:rgba(255,255,255,0.05);
+	font-size:15px;
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+	border:#888 1px solid;
+}
+
+.feedback form textarea:hover{
+	border:#0e83f7 2px solid;
+	background-color:rgba(255,255,255,0.1);
+}
+
+.feedback form textarea:click{
+	border:#0e83f7 2px solid;
+	background-color:rgba(255,255,255,0.1);
+}
+
+.feedback form .end{
+	overflow:hidden;
+	margin-top:10px;
+}
+
+.feedback form .end input{
+	float:left;
+	padding:10px;
+	width:200px;
+	background-color:#0e83f7;
+	border:none;
+	border-radius:10px;
+	color:#fff;
+	font-size:14px;
+}
+
+.feedback form .end .form-icons{
+	float:right;
+	margin-top:5px;
+}
+
+.feedback form .end .form-icons i{
+	width:30px;
+	height:30px;
+	line-height:30px;
+	color:#fff;
+	background-color:#1769ff;
+	border-radius:50%;
+}
+
+.feedback form .end .form-icons .fa-facebook-f{
+	background-color:#3b5998
+}
+
+.feedback form .end .form-icons .fa-twitter{
+	background-color:#1da1f2
+}
+
+.feedback form .end .form-icons .fa-google-plus-g{
+	background-color:#dd4b39
+}
+
+/* end feedback */
