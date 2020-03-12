@@ -9,7 +9,7 @@
                   @csrf
                     <input type="email" name="mail" placeholder="youe email" value="">
                       <input type="text" name="supject" placeholder="supject">
-                      <textarea placeholder="message"></textarea>
+                      <textarea placeholder="message" name="message"></textarea>
                       <div class="end">
                           <input type="submit" name="submit-feedback" value="send feadback">
                           <span class="form-icons">
