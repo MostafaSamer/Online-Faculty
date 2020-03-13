@@ -21,4 +21,4 @@ Route::get('/feedback', function () {
     return view('feedback');
 });
 
-Route::post('/feedback/add', 'Feedback.create');
+Route::post('/feedback/add', 'feedbackController@create');
