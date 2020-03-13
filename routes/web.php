@@ -13,9 +13,15 @@
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('homePage');
 });
 
 Auth::routes(['register' => false, 'password.request' => false, 'reset' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/feedback', function () {
+    return view('feedback');
+});
+
+Route::post('/feedback/add', 'feedbackController@create');
