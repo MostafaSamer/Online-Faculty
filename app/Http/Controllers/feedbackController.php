@@ -10,8 +10,8 @@ class feedbackController extends Controller
 {
   public function create(Request $request) {
       $feedback = new Feedback([
-          'f_email'    =>  $request->get('mail'),
-          'f_subject'    =>  $request->get('supject'),
+          'f_email'    =>  $request->get('email'),
+          'f_subject'    =>  $request->get('subject'),
           'f_message'    =>  $request->get('message'),
       ]);
       $feedback->save();

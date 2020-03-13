@@ -1,16 +1,15 @@
 
 @extends('layouts.app')
-
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+<div class="" style="background:rgba(49,55,61,0.85)	; width:100%;">
+    <div class=" justify-content-center">
+        <div class="">
+            <div class="">
                 @include('feedback/feedback')
             </div>
         </div>
     </div>
 </div>
-
-
-<link rel="stylesheet" href="{{ asset('feedback-style.css') }}">     <link rel="stylesheet" href="{{ asset('bootstrap.css') }}">     <link rel="stylesheet" href="{{ asset('normalize.css') }}">     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+@endsection
+<link rel="stylesheet" href="{{ asset('feedback-style.css') }}">
+<link rel="stylesheet" href="{{ asset('normalize.css') }}">
