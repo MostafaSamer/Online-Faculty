@@ -27,11 +27,11 @@ body{
 
 
 .main-color{
-	color:#0e83f7;
+	color:#FD871F;
 }
 
 .main-background{
-	background-color:#0e83f7;
+	background-color:#FD871F;
 }
 
 .overlay{
@@ -94,12 +94,12 @@ body{
 }
 
 .feedback form input:hover{
-	border:#0e83f7 2px solid;
+	border:#FD871F 2px solid;
 	background-color:rgba(255,255,255,0.1);
 }
 
 .feedback form input:click{
-	border:#0e83f7 2px solid;
+	border:#FD871F 2px solid;
 	background-color:rgba(255,255,255,0.1);
 }
 
@@ -132,12 +132,12 @@ body{
 }
 
 .feedback form textarea:hover{
-	border:#0e83f7 2px solid;
+	border:#FD871F 2px solid;
 	background-color:rgba(255,255,255,0.1);
 }
 
 .feedback form textarea:click{
-	border:#0e83f7 2px solid;
+	border:#FD871F 2px solid;
 	background-color:rgba(255,255,255,0.1);
 }
 
@@ -150,7 +150,7 @@ body{
 	float:left;
 	padding:10px;
 	width:200px;
-	background-color:#0e83f7;
+	background-color:#FD871F;
 	border:none;
 	border-radius:10px;
 	color:#fff;

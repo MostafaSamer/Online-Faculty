@@ -12,13 +12,16 @@
     <!-- Scripts -->
     <script src="{{ asset('jquery-3.4.1.min.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}" defer></script>
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <script src="{{asset('contentPlugin.js')}}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{asset('contentStyle.css')}}" />
 </head>
 <body>
     <div id="app">
@@ -39,6 +42,21 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                      <li class="js_nav-item nav-item">
+                        <a class="nav-item-child nav-item-hover nav-link active main-color" style="color: #515769" href="#">Home</a>
+                      </li>
+                      <li class="js_nav-item nav-item">
+                        <a class="nav-item-child nav-item-hover nav-link" href="#about">About us</a>
+                      </li>
+                      <li class="js_nav-item nav-item">
+                        <a class="nav-item-child nav-item-hover nav-link" href="#products">Products</a>
+                      </li>
+                      <li class="js_nav-item nav-item">
+                        <a class="nav-item-child nav-item-hover nav-link" href="#service">faculties</a>
+                      </li>
+                      <li class="js_nav-item nav-item">
+                        <a class="nav-item-child nav-item-hover nav-link" href="#feedback">Feedback</a>
+                      </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -46,17 +64,17 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link nav-item-child nav-item-hover" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle nav-item-child nav-item-hover" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item nav-item-child nav-item-hover" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -73,7 +91,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="padding: 0!important">
             @yield('content')
         </main>
     </div>
