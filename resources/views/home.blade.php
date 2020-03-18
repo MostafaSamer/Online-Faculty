@@ -15,6 +15,9 @@
                     @endif
 
                     You are logged in!
+                    <div>
+                      @include('AddFaculty/addfaculty')
+                    </div>
                 </div>
             </div>
         </div>

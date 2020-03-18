@@ -25,3 +25,5 @@ Route::get('/feedback', function () {
 });
 
 Route::post('/feedback/add', 'feedbackController@create');
+
+Route::post('/faculty/add', 'addfaculty@create');
