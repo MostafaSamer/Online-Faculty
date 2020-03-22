@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Faculty;
+use App\faculty;
 
 class addfaculty extends Controller
 {
   public function create(Request $request) {
-    $feedback = new Feedback([
+    $Faculty = new faculty([
         'name'    =>  $request->get('name'),
         'department'    =>  $request->get('department'),
         'courses'    =>  $request->get('courses'),
         'areaofexpertise'    =>  $request->get('areaofexpertise'),
-        'professionalinterest'    =>  $request->get('professionalinterest')
+        'professionalInterest'    =>  $request->get('professionalInterest')
     ]);
-    $feedback->save();
-     return redirect('/');
+    $Faculty->save();
+     return redirect('/home');
 }
 }
