@@ -14,7 +14,7 @@ class CreateFacultiesTable extends Migration
     public function up()
     {
         Schema::create('faculties', function (Blueprint $table) {
-              $table->bigIncrements('f_id');
+              $table->bigIncrements('id');
               $table->string('name',100);
               $table->string('department',100);
               $table->string('courses',1000);

@@ -43,7 +43,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                       <li class="js_nav-item nav-item">
-                        <a class="nav-item-child nav-item-hover nav-link active main-color" style="color: #515769" href="#">Home</a>
+                        <a class="nav-item-child nav-item-hover nav-link active main-color" style="color: #515769" href="/">Home</a>
                       </li>
                       <li class="js_nav-item nav-item">
                         <a class="nav-item-child nav-item-hover nav-link" href="#about">About us</a>
@@ -52,10 +52,10 @@
                         <a class="nav-item-child nav-item-hover nav-link" href="#products">Products</a>
                       </li>
                       <li class="js_nav-item nav-item">
-                        <a class="nav-item-child nav-item-hover nav-link" href="#service">faculties</a>
+                        <a class="nav-item-child nav-item-hover nav-link" href="#feedback">Feedback</a>
                       </li>
                       <li class="js_nav-item nav-item">
-                        <a class="nav-item-child nav-item-hover nav-link" href="#feedback">Feedback</a>
+                        <a class="nav-item-child nav-item-hover nav-link" href="/Online-Faculty/public/listfaculty">Faculties</a>
                       </li>
                         <!-- Authentication Links -->
                         @guest
@@ -68,6 +68,10 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home">Dashboard <span class="sr-only">(current)</span></a>
+                            </li>
+                            
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle nav-item-child nav-item-hover" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -85,6 +89,7 @@
                                     </form>
                                 </div>
                             </li>
+                            
                         @endguest
                     </ul>
                 </div>

@@ -24,4 +24,17 @@ public function listfaculty()
     $factiles=faculty::OrderBy('name')->paginate(5);
     return view('ListFaculty.listfaculty')->with('faclties',$factiles);
 }
+
+  /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $faculty=faculty::find($id);
+        return view('ListFaculty.show')->with('faculty',$faculty);
+    }
+
 }
