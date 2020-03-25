@@ -7,7 +7,7 @@
         <h1 class="nav-link">
             {{$faculty->name}}
         </h1>
-        {{-- <img src="/storage/cover_image/{{$post->cover_image}}"  alt=""><br><br> --}}
+        <img src="/storage/cover_image/{{$faculty->cover_image}}"  alt=""><br><br>
         <p>Area Of Expertise: {{$faculty->areaofexpertise}}</p>
         <hr>
         <h3>Department</h3>

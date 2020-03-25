@@ -8,9 +8,9 @@
             @foreach ($faclties as $faculty)
                 <div class="card card-body bg-light">
                     <div class="row">
-                        {{-- <div class="col-md-4 col-sm-4">
+                        <div class="col-md-4 col-sm-4">
                           <img src="/storage/cover_image/{{$faculty->cover_image}}" style="width:100%" alt=""> 
-                        </div> --}}
+                        </div>
                         <div class="col-md-8 col-sm-8">
                             <h3>
                                 {{-- {{url('/Online-Faculty/public/listfaculty/show/'.$category->id.'/subcategory')}} --}}

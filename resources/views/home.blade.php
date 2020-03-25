@@ -19,7 +19,17 @@
                     <div>
                         <br>
                         <a class="btn btn-primary " href="/Online-Faculty/public/listfaculty" role="button">List faculties </a>
-                        <br>@include('AddFaculty/addfaculty')
+                        <br>
+                        @if (count($errors)>0)
+                        <br>
+                            <div class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                    {{$error}}
+                                    <br>
+                                @endforeach
+                            </div>
+                        @endif
+                        @include('AddFaculty/addfaculty')
                     </div>
                 </div>
             </div>
