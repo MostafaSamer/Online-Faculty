@@ -24,7 +24,13 @@ Route::get('/feedback', function () {
     return view('feedback');
 });
 
+Route::get('/addfaculty', function () {
+    return view('AddFaculty/addpage');
+});
+
 Route::post('/feedback/add', 'feedbackController@create');
 Route::get('/Online-Faculty/public/listfaculty', 'addfaculty@listfaculty');
 Route::get('/Online-Faculty/public/listfaculty/show/{id}', 'addfaculty@show');
+Route::get('/Online-Faculty/public/listfaculty/edit/{id}', 'addfaculty@edit');
 Route::post('/faculty/add', 'addfaculty@create');
+Route::post('/faculty/update/{id}', 'addfaculty@update');
