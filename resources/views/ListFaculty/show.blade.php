@@ -29,14 +29,12 @@
         @endforeach
         <hr>
         <p>Professional Interest: {{$faculty->professionalInterest}}</p>
+        <br>
+        @if (!Auth::guest()  )
+            <a href="/Online-Faculty/public/listfaculty/edit/{{$faculty->id}}" class="btn btn-secondary">Edit</a>
+        @endif
+        <a href="/Online-Faculty/public/listfaculty/pdf/{{$faculty->id}}" style="float: right" class="btn btn-info">Download</a>
+        <br><br>
     </div>
-    {{-- @if (!Auth::guest()  )
-        @if (auth()->user()->id==$post->user->id)
-            <a href="/posts/{{$post->id}}/edit" class="btn btn-secondary">Edit</a>
-            {!! Form::open(['action'=>['postcontroller@destroy',$post->id],'method'=>'POST','class'=>'float-right']) !!}
-                {{ Form::hidden('_method', 'DELETE') }}
-                {{ Form::submit('Delete', ['class'=>'btn btn-danger']) }}
-            {!! Form::close() !!}
-        @endif    
-    @endif --}}
+    
 @endsection
