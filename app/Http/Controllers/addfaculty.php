@@ -50,7 +50,7 @@ public function listfaculty()
 }
 public function listfeedback()
 {
-    $factiles=feedback::OrderBy('created_at')->paginate(5);
+    $factiles=feedback::OrderBy('created_at', 'desc')->paginate(5);
     return view('Listfeedback.listfeedback')->with('faclties',$factiles);
 }
 
