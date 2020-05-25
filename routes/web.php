@@ -30,6 +30,7 @@ Route::get('/addfaculty', function () {
 
 Route::post('/feedback/add', 'feedbackController@create');
 Route::get('/Online-Faculty/public/listfaculty', 'addfaculty@listfaculty');
+Route::get('/Online-Faculty/public/listfeedback', 'addfaculty@listfeedback');
 Route::get('/Online-Faculty/public/listfaculty/show/{id}', 'addfaculty@show');
 Route::get('/Online-Faculty/public/listfaculty/pdf/{id}', 'addfaculty@pdf');
 

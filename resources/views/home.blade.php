@@ -30,7 +30,8 @@
                             </div>
                         @endif
                         <br> <br>
-                        <a class="btn btn-primary " href="/addfaculty" role="button">add faculty </a>
+                        <a class="btn btn-primary " href="/addfaculty" role="button">add faculty </a> <br><br><br>
+                        <a class="btn btn-primary " href="/Online-Faculty/public/listfeedback" role="button">List feedback </a>
                     </div>
                 </div>
             </div>

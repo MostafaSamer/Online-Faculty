@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\faculty;
+use App\feedback;
 use App;
 use PDF;
 
@@ -46,6 +47,11 @@ public function listfaculty()
 {
     $factiles=faculty::OrderBy('name')->paginate(5);
     return view('ListFaculty.listfaculty')->with('faclties',$factiles);
+}
+public function listfeedback()
+{
+    $factiles=feedback::OrderBy('created_at')->paginate(5);
+    return view('Listfeedback.listfeedback')->with('faclties',$factiles);
 }
 
   /**
@@ -113,8 +119,6 @@ public function listfaculty()
         $Faculty->save();
         return redirect('/Online-Faculty/public/listfaculty')->with('success','Faculty updated');
     }
-<<<<<<< HEAD
-=======
     public function pdf($id){
         $faculty=faculty::find($id);
         
@@ -152,5 +156,4 @@ public function listfaculty()
     //     $output=;
     //             return $output;
     // }
->>>>>>> download_pdf
 }
