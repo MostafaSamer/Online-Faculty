@@ -31,6 +31,11 @@ Route::get('/addfaculty', function () {
 Route::post('/feedback/add', 'feedbackController@create');
 Route::get('/Online-Faculty/public/listfaculty', 'addfaculty@listfaculty');
 Route::get('/Online-Faculty/public/listfaculty/show/{id}', 'addfaculty@show');
+<<<<<<< HEAD
+=======
+Route::get('/Online-Faculty/public/listfaculty/pdf/{id}', 'addfaculty@pdf');
+
+>>>>>>> download_pdf
 Route::get('/Online-Faculty/public/listfaculty/edit/{id}', 'addfaculty@edit');
 Route::post('/faculty/add', 'addfaculty@create');
 Route::post('/faculty/update/{id}', 'addfaculty@update');

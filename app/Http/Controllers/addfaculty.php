@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\faculty;
+use App;
+use PDF;
 
 class addfaculty extends Controller
 {
@@ -111,4 +113,44 @@ public function listfaculty()
         $Faculty->save();
         return redirect('/Online-Faculty/public/listfaculty')->with('success','Faculty updated');
     }
+<<<<<<< HEAD
+=======
+    public function pdf($id){
+        $faculty=faculty::find($id);
+        
+        // $pdf = PDF::loadView('ListFaculty/show',compact('faculty'));
+        // return $pdf->download('faculty.pdf');
+        $pdf = App::make('dompdf.wrapper');
+        
+        $pdf->loadHTML('<h1 class="nav-link">'.
+                        $faculty->name.'
+                        </h1>
+                        <img src="./storage/cover_image/'.$faculty->cover_image.'" alt=""><br><br>
+                        <p>Area Of Expertise: '.$faculty->areaofexpertise.'</p>
+                        <hr>
+                        <h3>Department</h3>
+                        
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8">
+                                    <p>'.$faculty->department.'</p>
+                                </div>
+                            </div>
+                        
+                        <hr>
+                        <h3>Courses</h3>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8">
+                                    <p>'.$faculty->courses.'</p>
+                                </div>
+                            </div>
+                        
+                        <hr>
+                        <p>Professional Interest: '.$faculty->professionalInterest.'</p>');
+        return $pdf->stream();
+    }
+    // public function convert_to_html($faculty){
+    //     $output=;
+    //             return $output;
+    // }
+>>>>>>> download_pdf
 }
