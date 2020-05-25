@@ -41,6 +41,17 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+                    <div class="Search">
+                          <form method="get" action="{{ action('SearchController@search') }}" accept-charset="UTF-8">
+                        <!--  <form action="" method="get">-->
+                            <div class "Faculties-group">
+                              <input type="search" name="search" class="Faculties-control" />
+                              <span class="Faculties-group-btn">
+                                <button type="search" class="btn btn-primary">Search</button>
+                              </span>
+                            </div>
+                          </form>
+                      </div>
                     <ul class="navbar-nav ml-auto">
                       <li class="js_nav-item nav-item">
                         <a class="nav-item-child nav-item-hover nav-link active main-color" style="color: #515769" href="/">Home</a>
@@ -71,7 +82,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/home">Dashboard <span class="sr-only">(current)</span></a>
                             </li>
-                            
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle nav-item-child nav-item-hover" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -89,7 +100,7 @@
                                     </form>
                                 </div>
                             </li>
-                            
+
                         @endguest
                     </ul>
                 </div>
