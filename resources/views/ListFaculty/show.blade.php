@@ -33,12 +33,8 @@
         @if (!Auth::guest()  )
             <a href="/Online-Faculty/public/listfaculty/edit/{{$faculty->id}}" class="btn btn-secondary">Edit</a>
         @endif
-<<<<<<< HEAD
-        
-=======
         <a href="/Online-Faculty/public/listfaculty/pdf/{{$faculty->id}}" style="float: right" class="btn btn-info">Download</a>
         <br><br>
->>>>>>> download_pdf
     </div>
     
 @endsection
