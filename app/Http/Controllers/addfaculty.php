@@ -87,6 +87,13 @@ public function listfeedback()
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function destroy($id)
+    {
+      $post = Post::find($id);
+      $post-> delete ();
+      return redirect('/Online-Faculty/public/listfaculty')->with('success','Faculty deleted');
+
+    }
     public function update(Request $request, $id)
     {
 
