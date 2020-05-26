@@ -11,7 +11,7 @@ class addfaculty extends Controller
     $this->validate($request,[
         'cover_image'=>'image|nullable|max:2048|mimes:jpeg,png,jpg,gif'
     ]);
-    
+
     if ($request->hasfile('cover_image')) {
         //get file name with ext
         $filenamewithext= $request->file('cover_image')->getClientOriginalName();
@@ -23,7 +23,7 @@ class addfaculty extends Controller
         $filenametostore=$filemane.'_'.time().'.'.$extension;
         //upload image
         $path=$request->file('cover_image')->storeAs('public/cover_image',$filenametostore);
-    } 
+    }
     else {
             $filenametostore='noimage.png';
     }
@@ -66,9 +66,9 @@ public function listfaculty()
      */
     public function edit($id)
     {
-        
+
         $faculty=faculty::find($id);
-        
+
         return view('updatefaculty.edit')->with('faculty',$faculty);
     }
 
@@ -79,9 +79,16 @@ public function listfaculty()
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function destroy($id)
+    {
+      $post = Post::find($id);
+      $post-> delete ();
+      return redirect('/Online-Faculty/public/listfaculty')->with('success','Faculty deleted');
+
+    }
     public function update(Request $request, $id)
     {
-        
+
         $this->validate($request,[
             'cover_image'=>'image|nullable|max:2048|mimes:jpeg,png,jpg,gif'
         ]);
@@ -98,7 +105,7 @@ public function listfaculty()
             //upload image
             $path=$request->file('cover_image')->storeAs('public/cover_image',$filenametostore);
         }
-        
+
         $Faculty= faculty::find($id);
         $Faculty->name = $request->input('name');
         $Faculty->department = $request->input('department');

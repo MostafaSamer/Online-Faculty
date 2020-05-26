@@ -33,8 +33,16 @@
         @if (!Auth::guest()  )
             <a href="/Online-Faculty/public/listfaculty/edit/{{$faculty->id}}" class="btn btn-secondary">Edit</a>
 
-            
+<<<<<<< Updated upstream
+
             <a href="/online-Faculty/public/deletefaculty/delete/{{$faculty->id}" class="btn btn-secondary">Delete</a>
+=======
+            <a href="/Online-Faculty/public/deletefaculty/delete/{{$faculty->id}" class="btn btn-secondary">Delete</a>
+            {!!Form::open(['action' => ['addfaculty@destroy', $post->id ], 'method' =>'POST' , 'class'='pull-right'])!!}
+                    {{Form::hidden('_method', 'DELETE')}}
+                    {{Form::supmit('delete', ['class' => 'btn btn-secondary'])}}
+            {!!Form::close()!!}
+>>>>>>> Stashed changes
         @endif
 
     </div>
