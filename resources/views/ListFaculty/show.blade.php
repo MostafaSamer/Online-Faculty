@@ -32,27 +32,13 @@
         <br>
         @if (!Auth::guest()  )
             <a href="/Online-Faculty/public/listfaculty/edit/{{$faculty->id}}" class="btn btn-secondary">Edit</a>
-<<<<<<< HEAD
+
             <br><br>
             <a href="/Online-Faculty/public/listfaculty/delete/{{$faculty->id}}" class="btn btn-secondary">delete</a>
         @endif
         <a href="/Online-Faculty/public/listfaculty/pdf/{{$faculty->id}}" style="float: right" class="btn btn-info">Download</a>
         <br><br>
-=======
 
-<<<<<<< Updated upstream
-
-            <a href="/online-Faculty/public/deletefaculty/delete/{{$faculty->id}" class="btn btn-secondary">Delete</a>
-=======
-            <a href="/Online-Faculty/public/deletefaculty/delete/{{$faculty->id}" class="btn btn-secondary">Delete</a>
-            {!!Form::open(['action' => ['addfaculty@destroy', $post->id ], 'method' =>'POST' , 'class'='pull-right'])!!}
-                    {{Form::hidden('_method', 'DELETE')}}
-                    {{Form::supmit('delete', ['class' => 'btn btn-secondary'])}}
-            {!!Form::close()!!}
->>>>>>> Stashed changes
-        @endif
-
->>>>>>> 954ca52cd6915a40e331a512de6ded6e39722fe3
     </div>
 
 @endsection
