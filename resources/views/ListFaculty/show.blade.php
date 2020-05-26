@@ -32,9 +32,11 @@
         <br>
         @if (!Auth::guest()  )
             <a href="/Online-Faculty/public/listfaculty/edit/{{$faculty->id}}" class="btn btn-secondary">Edit</a>
+            <br><br>
+            <a href="/Online-Faculty/public/listfaculty/delete/{{$faculty->id}}" class="btn btn-secondary">delete</a>
         @endif
         <a href="/Online-Faculty/public/listfaculty/pdf/{{$faculty->id}}" style="float: right" class="btn btn-info">Download</a>
         <br><br>
     </div>
-    
+
 @endsection

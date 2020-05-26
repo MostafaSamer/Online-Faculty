@@ -14,7 +14,7 @@ class addfaculty extends Controller
     $this->validate($request,[
         'cover_image'=>'image|nullable|max:2048|mimes:jpeg,png,jpg,gif'
     ]);
-    
+
     if ($request->hasfile('cover_image')) {
         //get file name with ext
         $filenamewithext= $request->file('cover_image')->getClientOriginalName();
@@ -26,7 +26,7 @@ class addfaculty extends Controller
         $filenametostore=$filemane.'_'.time().'.'.$extension;
         //upload image
         $path=$request->file('cover_image')->storeAs('public/cover_image',$filenametostore);
-    } 
+    }
     else {
             $filenametostore='noimage.png';
     }
@@ -74,9 +74,9 @@ public function listfeedback()
      */
     public function edit($id)
     {
-        
+
         $faculty=faculty::find($id);
-        
+
         return view('updatefaculty.edit')->with('faculty',$faculty);
     }
 
@@ -89,7 +89,7 @@ public function listfeedback()
      */
     public function update(Request $request, $id)
     {
-        
+
         $this->validate($request,[
             'cover_image'=>'image|nullable|max:2048|mimes:jpeg,png,jpg,gif'
         ]);
@@ -106,7 +106,7 @@ public function listfeedback()
             //upload image
             $path=$request->file('cover_image')->storeAs('public/cover_image',$filenametostore);
         }
-        
+
         $Faculty= faculty::find($id);
         $Faculty->name = $request->input('name');
         $Faculty->department = $request->input('department');
@@ -121,11 +121,11 @@ public function listfeedback()
     }
     public function pdf($id){
         $faculty=faculty::find($id);
-        
+
         // $pdf = PDF::loadView('ListFaculty/show',compact('faculty'));
         // return $pdf->download('faculty.pdf');
         $pdf = App::make('dompdf.wrapper');
-        
+
         $pdf->loadHTML('<h1 class="nav-link">'.
                         $faculty->name.'
                         </h1>
@@ -133,13 +133,13 @@ public function listfeedback()
                         <p>Area Of Expertise: '.$faculty->areaofexpertise.'</p>
                         <hr>
                         <h3>Department</h3>
-                        
+
                             <div class="row">
                                 <div class="col-md-8 col-sm-8">
                                     <p>'.$faculty->department.'</p>
                                 </div>
                             </div>
-                        
+
                         <hr>
                         <h3>Courses</h3>
                             <div class="row">
@@ -147,13 +147,16 @@ public function listfeedback()
                                     <p>'.$faculty->courses.'</p>
                                 </div>
                             </div>
-                        
+
                         <hr>
                         <p>Professional Interest: '.$faculty->professionalInterest.'</p>');
         return $pdf->stream();
     }
-    // public function convert_to_html($faculty){
-    //     $output=;
-    //             return $output;
-    // }
+    public function deletefaculty($id)
+        {
+          $post = faculty::find($id);
+          $post-> delete ();
+          return redirect('/Online-Faculty/public/listfaculty')->with('success','Faculty deleted');
+
+        }
 }

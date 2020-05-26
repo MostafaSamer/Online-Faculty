@@ -39,3 +39,4 @@ Route::post('/faculty/add', 'addfaculty@create');
 Route::post('/faculty/update/{id}', 'addfaculty@update');
 Route::get('/serchedfaculties', 'SearchController@search');
 Route::get('/serchedfaculties/showsearchedfaculties/{id}', 'addfaculty@show');
+Route::get('/Online-Faculty/public/listfaculty/delete/{id}','addfaculty@deletefaculty');
