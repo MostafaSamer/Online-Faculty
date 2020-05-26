@@ -32,8 +32,11 @@
         <br>
         @if (!Auth::guest()  )
             <a href="/Online-Faculty/public/listfaculty/edit/{{$faculty->id}}" class="btn btn-secondary">Edit</a>
+
+            
+            <a href="/online-Faculty/public/deletefaculty/delete/{{$faculty->id}" class="btn btn-secondary">Delete</a>
         @endif
-        
+
     </div>
-    
+
 @endsection

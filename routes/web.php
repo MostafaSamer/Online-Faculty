@@ -29,8 +29,8 @@ Route::get('/addfaculty', function () {
 });
 
 Route::post('/feedback/add', 'feedbackController@create');
-Route::get('/Online-Faculty/public/listfaculty', 'addfaculty@listfaculty');
-Route::get('/Online-Faculty/public/listfaculty/show/{id}', 'addfaculty@show');
-Route::get('/Online-Faculty/public/listfaculty/edit/{id}', 'addfaculty@edit');
+Route::get('/listfaculty', 'addfaculty@listfaculty');
+Route::get('/listfaculty/show/{id}', 'addfaculty@show');
+Route::get('/listfaculty/edit/{id}', 'addfaculty@edit');
 Route::post('/faculty/add', 'addfaculty@create');
 Route::post('/faculty/update/{id}', 'addfaculty@update');
